@@ -1,0 +1,14 @@
+pdfplumber==0.10.3
+pandascikit-learn
+fastapi
+uvicorn
+python-multipart
+httpx
+openai
+pytesseract
+pdf2image
+pillow
+sqlalchemy==2.0.25
+pytest==8.0.0
+python-dotenv==1.0.1
+reportlab==4.0.9
