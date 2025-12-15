@@ -14,16 +14,16 @@ A production-ready pipeline for extracting structured data from financial docume
 ## Architecture
 ```mermaid
 graph TD
-    A[PDF Upload] --> B{Is Scanned?}
-    B -- Yes --> C[OCR (Tesseract)]
+    A[PDF Upload] --> B{"Is Scanned?"}
+    B -- Yes --> C["OCR (Tesseract)"]
     B -- No --> D[Digital Extraction]
     C --> E[Clean Text]
     D --> E
     E --> F{Classification}
     F --> G[Regex Extraction]
-    G --> H{Critical Fields Found?}
+    G --> H{"Critical Fields Found?"}
     H -- Yes --> I[Store in DB]
-    H -- No --> J[LLM Fallback (OpenAI)]
+    H -- No --> J["LLM Fallback (OpenAI)"]
     J --> I
 ```
 
